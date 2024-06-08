@@ -1,9 +1,8 @@
-<?php include 'send_mail.php';?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Sugig event registration</title>\
+    <title>Sugig event registration</title>
 </head>
 
 <body>
@@ -268,13 +267,15 @@
         <input type="checkbox" name="feature" id="translator" value="30" onclick="getTotalPrice()"> translator <br>
         <input type="checkbox" name="feature" id="feature4" value="40" onclick="getTotalPrice()"> feature 4 <br>
         <input type="checkbox" name="feature" id="feature5" value="50" onclick="getTotalPrice()"> feature 5 <br>
-        <input type="submit" name="submit" value="Register and pay">
+        <input id= "update" type="submit" name="submit" value="Register and pay">
     </form>
 
-    <h4 name = "price_to_pay" id="totalAmmount" style="display:none"></h4>
+    <h4 name = "price_to_pay" id="totalAmmount" style="display:block"></h4>
 
 </body>
 <script src="validateEmail.js"></script>
 <script src="getTotalPrice.js"></script>
+<script src="updateDOM.js"></script>
 
 </html>
+<?php include 'send_mail.php';?>
