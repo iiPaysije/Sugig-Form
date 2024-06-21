@@ -7,28 +7,22 @@ if (isset($_POST['submit'])) {
     $last_name = $_POST['last_name'];
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
+    $to_pay = 100;
 
-    // get html element, extract int price for innerHTML
-//    $dom = new DOMDocument("1.0", "utf-8");
-//    $updatedHTML = $_POST['html'];
-//    $dom->loadHTML($updatedHTML);
-//    $div = $dom->getElementById('totalAmmount');
-//    print_r($div);
-    $html_content = file_get_contents('php://input');
-    print_r($html_content);
+//    var_dump($_POST);
+    // if option is selected, add its value to final price, else add 0
+    isset($_POST['cotisation']) ? $to_pay += (int)$_POST['cotisation'] : $cotisation = 0;
+    isset($_POST['hotel']) ? $to_pay += (int)$_POST['hotel'] : $hotel = 0;
+    isset($_POST['translator']) ? $to_pay += (int)$_POST['translator'] : $translator = 0;
+    isset($_POST['feature4']) ? $to_pay += (int)$_POST['feature4'] : $feature4 = 0;
+    isset($_POST['feature5']) ? $to_pay += (int)$_POST['feature4'] : $feature5 = 0;
 
-
-    $price_to_pay = (int)filter_var($div, FILTER_SANITIZE_NUMBER_INT);
-    die("price to pay is: " . $price_to_pay);
-
-
-    // TODO: create a message template for the email
-
-    $headers = "From:" . $from;
+    $message = "Thank you" . $first_name . "your price to pay is: " . $to_pay . "$";
+    $headers = "From:" . "me@example.com";
     $headers2 = "From:" . $to;
-    // mail($to,$subject,$message,$headers);
+    mail($to, $subject, $message, $headers);
     // mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    // echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    echo "<h3>Mail sent to: " . $to . "<br><br> Thank you " . $first_name . ". <br> your total ammount for payment is: " . $to_pay . "$</h3>";
     // You can also use header('Location: thank_you.php'); to redirect to another page.
 }
 ?>

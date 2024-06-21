@@ -1,6 +1,8 @@
 function getTotalPrice() {
   // decalaring value that are mandatory
-  let checkboxes = document.getElementsByName("feature");
+  // let checkboxes = document.getElementsByTagName("checkbox");
+  let checkboxes = document.getElementsByClassName("check")
+
   let additional_price = 0;
   let initial_fee = 100;
   let final_price = 0;
