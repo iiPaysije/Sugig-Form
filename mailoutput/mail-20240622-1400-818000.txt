@@ -1,0 +1,5 @@
+To: random@r.com
+Subject: Form submission
+From:me@example.com
+
+Thank youpavleyour price to pay is: 130$

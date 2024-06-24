@@ -2,4 +2,4 @@ To: pavleljubenovic99@gmail.com
 Subject: Form submission
 From:me@example.com
 
-Thank youPavleyour price to pay is: 240$
+Thank youPavleyour price to pay is: 250$

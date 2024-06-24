@@ -1,0 +1,5 @@
+To: pera@mail.com
+Subject: Form submission
+From:me@example.com
+
+Thank youperayour price to pay is: 220$

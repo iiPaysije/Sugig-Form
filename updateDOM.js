@@ -3,6 +3,7 @@ function getUpdatedHTML() {
     return updatedHTML;
 }
 
+// send updated HTML DOM to PHP
 function sendUpdatedHTMLToServer() {
     var updatedHTML = getUpdatedHTML();
 

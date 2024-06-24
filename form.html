@@ -10,7 +10,7 @@
     <h2>Submit Your Information </h2>
 
     <!-- Form -->
-    <form method="post" action="send_mail.php">
+    <form method="post" action="send_mail.php" enctype="multipart/form-data">
         First Name: <input type="text" name="first_name"><br>
         Last Name: <input type="text" name="last_name"><br>
         Email: <input type="text" name="email" id="email" onkeyup="validateEmailField()"><br>
@@ -266,7 +266,9 @@
         <input type="checkbox" class= "check" name="hotel" id="hotel" value="20" onclick="getTotalPrice()"> hotel <br>
         <input type="checkbox" class= "check" name="translator" id="translator" value="30" onclick="getTotalPrice()"> translator <br>
         <input type="checkbox" class= "check" name="feature4" id="feature4" value="40" onclick="getTotalPrice()"> feature 4 <br>
-        <input type="checkbox" class= "check" name="feature5" id="feature5" value="50" onclick="getTotalPrice()"> feature 5 <br>
+        <input type="checkbox" class= "check" name="feature5" id="feature5" value="50" onclick="getTotalPrice()"> feature 5 <br><br>
+        <label for="file">Upload File</label>
+        <input id="file" type="file" /> <br> <br>
         <input id= "update" type="submit" name="submit" value="Register and pay">
     </form>
 
